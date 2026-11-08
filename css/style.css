@@ -1,0 +1,32 @@
+
+*{
+    box-sizing: border-box;
+}
+
+article{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+}
+
+.product{
+    text-align: center;
+
+}
+.product img{
+    width: 200px;
+    height: 200px;
+}
+
+.div-productos{
+    padding: 20px 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.div-search-bar{
+    display: flex;
+    justify-content: center;
+
+}
