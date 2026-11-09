@@ -1,28 +1,109 @@
 
+:root{
+    
+    --azul: #232d49;
+    --dorado:#c9a24d;
+    --crema:#f6f0e0;
+    --dorado-osc:#8a6a1f;
+    --crema-osc:#ebe2cc;
+    --dorado-cl:#d4af61;
+    --blanco:#fff;
+    --negro:#000000;
+    --fuente-titulos:'Playfair Display';
+    --fuente-texto:'Lora';
+
+}
 *{
     box-sizing: border-box;
+   
+}   
+
+body{
+ background-color: var(--azul);
 }
 
 article{
     border: 1px solid #ccc;
     border-radius: 5px;
-
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    background-color: var(--crema);
+    border: 2px solid var(--dorado);
 }
 
+.product p{
+    max-width: 95%;
+    margin-inline:auto;
+    font-size: 14px;
+    font-family: var(--fuente-texto);
+    flex:1;
+    margin-top: 20px;
+
+
+}
+.product h2{
+    font-size: 22px;
+    font-family: var(--fuente-titulos);
+    color: color-mix(in srgb, var(--azul) 80%, var(--negro) 80%) ;
+    font-weight: 550;
+    letter-spacing: 0.1px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+}
+
+.product h3{
+    font-family: var(--fuente-texto);
+    font-weight: 700;
+    font-size: 22px;
+    color: color-mix(in srgb, var(--dorado-osc) 50%, var(--negro) 50%) ;
+    line-height: 1.5;
+    margin-top: 0;
+}
+.product button{
+    all:unset;
+    margin-top: auto;
+    background-color: var(--dorado-cl);
+    font-family: var(--fuente-texto);
+    border-radius: 4px;
+    padding: 5px 10px;
+    color: var(--negro);
+}
 .product{
     text-align: center;
+    max-width: 330px;
 
 }
+
 .product img{
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    aspect-ratio: 1 /1;
+    object-fit: cover;
+    background-color: var(--dorado-cl);
+    mix-blend-mode: multiply;
+
+
+}
+.product-image{
+    position: relative;
+}
+.product-image::after{
+    content: "";
+    display: block;
+    background-color: var(--azul);
+    width: 100%;
+    height: 1px;
+    margin: 15px auto;
 }
 
 .div-productos{
-    padding: 20px 60px;
+    padding: 20px 100px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
 }
 
 .div-search-bar{

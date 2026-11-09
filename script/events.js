@@ -6,7 +6,6 @@ const searchBar= document.getElementById('search-bar');
 buttonSearch.addEventListener('click', async () => {
     const searchTerm = searchBar.value.trim();
     const search= await serchProducts(searchTerm);
-    
     console.log(search);
     renderProducts(search);
 })
